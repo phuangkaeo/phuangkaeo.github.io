@@ -16,8 +16,8 @@
     }
 
     header {
-      background: url('images/banner.jpg') center center / cover no-repeat;
-      padding: 120px 20px 60px;
+      background: linear-gradient(to right, #2980b9, #6dd5fa);
+      padding: 60px 20px 40px;
       color: #fff;
       text-align: center;
       position: relative;
@@ -93,17 +93,18 @@
     .timeline-item {
       position: relative;
       margin-bottom: 30px;
-      padding-left: 20px;
+      padding-left: 0;
     }
 
-    .timeline-dot {
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -11px;
+      top: 6px;
       width: 14px;
       height: 14px;
       background-color: #3498db;
       border-radius: 50%;
-      position: absolute;
-      left: -10px;
-      top: 4px;
     }
 
     .timeline-date {
@@ -111,6 +112,11 @@
       color: #555;
       font-size: 14px;
       margin-bottom: 6px;
+      margin-left: 20px;
+    }
+
+    .timeline-content {
+      margin-left: 20px;
     }
 
     .timeline-content h3 {
@@ -131,7 +137,7 @@
 <body>
 
 <header>
-  <img src="images/photo.jpg" alt="Phichet PHUANGKAEO" class="profile-pic">
+  <img src="images/Profile.jpg" alt="Phichet PHUANGKAEO" class="profile-pic">
   <div class="header-content">
     <h1>Phichet PHUANGKAEO</h1>
     <p>Data Engineer | Power BI Consultant</p>
@@ -148,7 +154,6 @@
   <h2><i data-lucide="briefcase"></i> Expérience Professionnelle</h2>
   <div class="timeline">
     <div class="timeline-item">
-      <div class="timeline-dot"></div>
       <div class="timeline-date">Déc. 2023 – Présent</div>
       <div class="timeline-content">
         <h3>Data Engineer (Alternance) – oXya, Loos</h3>
@@ -161,7 +166,6 @@
     </div>
 
     <div class="timeline-item">
-      <div class="timeline-dot"></div>
       <div class="timeline-date">Jan. 2022 – Fév. 2022</div>
       <div class="timeline-content">
         <h3>Data Analyst (Stage) – Ramsay Santé</h3>
@@ -174,7 +178,6 @@
     </div>
 
     <div class="timeline-item">
-      <div class="timeline-dot"></div>
       <div class="timeline-date">Nov. 2021 – Fév. 2022</div>
       <div class="timeline-content">
         <h3>BI Analyst (Freelance) – Avalant Global</h3>
