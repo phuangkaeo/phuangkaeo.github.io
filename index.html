@@ -132,6 +132,23 @@
       list-style: disc;
       font-size: 14px;
     }
+
+    .download-btn {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #2980b9;
+    }
   </style>
 </head>
 <body>
@@ -261,8 +278,26 @@
   </div>
 </div>
 
+<button id="download-pdf" class="download-btn">Télécharger en PDF</button>
+</div>
+
 <script>
   lucide.createIcons();
+
+  document.getElementById('download-pdf').addEventListener('click', function() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    doc.setFont("times", "normal");
+    doc.text("Phichet PHUANGKAEO", 20, 20);
+    doc.text("Data Engineer | Power BI Consultant", 20, 30);
+    doc.text("Lille, France | +33 7 66 08 95 58 | phichet.phuangkaeo@outlook.com", 20, 40);
+
+    doc.text("Profil", 20, 60);
+    doc.text("Passionné par la Data et la Business Intelligence...", 20, 70);
+
+    doc.save('CV_Phichat_Phuangkaeo.pdf');
+  });
 </script>
 </body>
 </html>
