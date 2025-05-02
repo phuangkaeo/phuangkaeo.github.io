@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CV - Phichet PHUANGKAEO</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     body {
-      margin: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #f4f6f8;
       color: #2c3e50;
+      margin: 0;
+      padding: 0;
     }
 
     header {
-      background: linear-gradient(to right, #2980b9, #6dd5fa);
-      padding: 100px 20px 40px;
+      background: url('images/banner.jpg') center center / cover no-repeat;
+      padding: 120px 20px 60px;
       color: #fff;
       text-align: center;
       position: relative;
     }
-
 
     .profile-pic {
       width: 140px;
@@ -67,12 +68,70 @@
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
     }
+
+    h2 {
+      color: #2980b9;
+      border-bottom: 2px solid #ecf0f1;
+      padding-bottom: 5px;
+      margin-top: 40px;
+      font-weight: 600;
+    }
+
+    h2 i {
+      margin-right: 10px;
+      vertical-align: middle;
+      color: #3498db;
+    }
+
+    .timeline {
+      position: relative;
+      margin-left: 20px;
+      padding-left: 20px;
+      border-left: 3px solid #3498db;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+      padding-left: 20px;
+    }
+
+    .timeline-dot {
+      width: 14px;
+      height: 14px;
+      background-color: #3498db;
+      border-radius: 50%;
+      position: absolute;
+      left: -10px;
+      top: 4px;
+    }
+
+    .timeline-date {
+      font-weight: bold;
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .timeline-content h3 {
+      margin-top: 0;
+      margin-bottom: 5px;
+      color: #2c3e50;
+      font-size: 16px;
+    }
+
+    .timeline-content ul {
+      margin: 0;
+      padding-left: 20px;
+      list-style: disc;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="images/Profile.jpg" alt="Phichet PHUANGKAEO" class="profile-pic">
+  <img src="images/photo.jpg" alt="Phichet PHUANGKAEO" class="profile-pic">
   <div class="header-content">
     <h1>Phichet PHUANGKAEO</h1>
     <p>Data Engineer | Power BI Consultant</p>
@@ -83,88 +142,72 @@
 </header>
 
 <div class="container">
-  <div class="section">
-    <h2>Profil</h2>
-    <p>
-    Passionné par la <strong>Data</strong> et la <strong>Business Intelligence</strong>, j’ai une expertise approfondie en 
-    <strong>Power BI</strong>, <strong>Power Automate</strong> et <strong>Dataform</strong>, avec une expérience significative 
-    dans la <strong>conception de tableaux de bord dynamiques</strong>, 
-    l’<strong>optimisation de processus ETL</strong> et l’<strong>automatisation des flux de travail</strong>. 
-    Fort d'une solide expérience en <strong>SQL</strong> et en <strong>modélisation de données</strong>, je suis prêt 
-    à relever des défis <strong>techniques</strong> et <strong>stratégiques</strong> pour optimiser l'exploitation des données.
-  </p>
+  <h2><i data-lucide="user-circle-2"></i> Profil</h2>
+  <p>Passionné par la <strong>Data</strong> et la <strong>Business Intelligence</strong>, j’ai une expertise approfondie en <strong>Power BI</strong>, <strong>Power Automate</strong>, et <strong>Dataform</strong>, avec une expérience significative dans la <strong>conception de tableaux de bord dynamiques</strong>, l’<strong>optimisation de processus ETL</strong> et l’<strong>automatisation des flux de travail</strong>. Fort d'une solide expérience en <strong>SQL</strong> et en <strong>modélisation de données</strong>, je suis prêt à relever des défis techniques et stratégiques pour optimiser l'exploitation des données.</p>
+
+  <h2><i data-lucide="briefcase"></i> Expérience Professionnelle</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Déc. 2023 – Présent</div>
+      <div class="timeline-content">
+        <h3>Data Engineer (Alternance) – oXya, Loos</h3>
+        <ul>
+          <li>Intégration de données On-Premise et Cloud</li>
+          <li>Optimisation de workflows Power Automate</li>
+          <li>Dashboards avancés avec Power BI</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Jan. 2022 – Fév. 2022</div>
+      <div class="timeline-content">
+        <h3>Data Analyst (Stage) – Ramsay Santé</h3>
+        <ul>
+          <li>Analyse CAPEX & hotline FCC</li>
+          <li>Tableaux de bord interactifs (Power BI)</li>
+          <li>Formation Power BI (DAX, modélisation)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Nov. 2021 – Fév. 2022</div>
+      <div class="timeline-content">
+        <h3>BI Analyst (Freelance) – Avalant Global</h3>
+        <ul>
+          <li>ETL avec Oracle Data Integrator (ODI)</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <div class="section">
-    <h2>Expérience Professionnelle</h2>
-    <h3 class="job-title">Data Engineer (Alternance) – oXya, Loos, France</h3>
-    <p><em>Déc. 2023 – Présent</em></p>
-    <ul>
-      <li>Exploitation et intégration de données depuis des sources On-Premise et Cloud.</li>
-      <li>Suivi des processus ELT et optimisation des workflows Power Automate.</li>
-      <li>Conception de tableaux de bord Power BI avancés et automatisation des reportings.</li>
-    </ul>
+  <h2><i data-lucide="settings"></i> Compétences</h2>
+  <ul>
+    <li><strong>Business Intelligence:</strong> Power BI, Grafana, Tableau, Qlik Sense</li>
+    <li><strong>Data Engineering:</strong> SQL Server, PostgreSQL, Oracle, Talend, SSIS, Dataform</li>
+    <li><strong>Cloud & Automatisation:</strong> Azure Data Factory, Power Automate</li>
+    <li><strong>Langages & ML:</strong> Python, R, Scikit-Learn, TensorFlow</li>
+  </ul>
 
-    <h3 class="job-title">Data Analyst (Stage) – Ramsay Santé, Marcq-en-Barœul</h3>
-    <p><em>Jan. 2022 – Fév. 2022</em></p>
-    <ul>
-      <li>Analyse de données financières (CAPEX) et système de hotline FCC.</li>
-      <li>Conception de tableaux de bord interactifs sur Power BI.</li>
-      <li>Formation des équipes sur Power BI (DAX, modélisation de données).</li>
-    </ul>
+  <h2><i data-lucide="book-open-check"></i> Certifications & Formations</h2>
+  <ul>
+    <li>Mastère Management de la Transition Digitale – Junia XP, Lille (2023-2025)</li>
+    <li>Data Engineer – M2i Formation, Villeneuve d'Ascq (2023)</li>
+    <li>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</li>
+  </ul>
 
-    <h3 class="job-title">BI Analyst (Freelance) – Avalant Global, Bangkok, Thaïlande</h3>
-    <p><em>Nov. 2021 – Fév. 2022</em></p>
-    <ul>
-      <li>Développement de processus ETL avec Oracle Data Integrator (ODI).</li>
-    </ul>
-
-    <h3 class="job-title">Développeur BI – 4Plus Consulting, Bangkok, Thaïlande</h3>
-    <p><em>Fév. 2016 - Déc. 2018</em></p>
-    <ul>
-      <li>Conception et mise en œuvre de bases de données (SQL Server, Oracle).</li>
-      <li>Transformation des exigences métier en modèles de données et pipelines ETL.</li>
-      <li>Développement et maintenance des reportings BI.</li>
-    </ul>
-
-    <h3 class="job-title">Formateur Logiciel – Siam Piwat Retail, Bangkok</h3>
-    <p><em>Fév. 2016 - Déc. 2018</em></p>
-    <ul>
-      <li>Formation sur Tableau et SAP Data Services.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Compétences</h2>
-    <ul>
-      <li><strong>Business Intelligence:</strong> Power BI (DAX, M Query, Service, Gateway), Grafana, Tableau, Qlik Sense</li>
-      <li><strong>Data Engineering & Cloud:</strong> SQL Server, PostgreSQL, Oracle, Talend, ODI, SSIS, Dataform, Azure Data Factory, Power Automate</li>
-      <li><strong>Programmation & ML:</strong> Python, R, Scikit-Learn, TensorFlow</li>
-      <li><strong>Soft Skills:</strong> Esprit d'équipe, adaptabilité, rigueur, créativité</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Certifications & Formations</h2>
-    <ul>
-      <li>Mastère Management de la Transition Digitale (BI & Data Science), Junia XP, Lille, France (2023-2025)</li>
-      <li>Data Engineer, M2i Formation, Villeneuve d'Ascq, France (2023)</li>
-      <li>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</li>
-    </ul>
-  </div>
-
-  <div class="section">
-  <h2>Langues</h2>
+  <h2><i data-lucide="languages"></i> Langues</h2>
   <div style="display: flex; gap: 40px; flex-wrap: wrap;">
-
     <div class="circle-skill">
       <svg width="100" height="100">
         <circle cx="50" cy="50" r="45" stroke="#e0e0e0" stroke-width="10" fill="none" />
         <circle cx="50" cy="50" r="45" stroke="#3498db" stroke-width="10" fill="none"
-                stroke-dasharray="283"
-                stroke-dashoffset="70"
-                transform="rotate(-90 50 50)" />
-        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="#2c3e50">Pro</text>
+                stroke-dasharray="283" stroke-dashoffset="70" transform="rotate(-90 50 50)" />
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="#2c3e50">Fluent</text>
       </svg>
       <div style="text-align: center;">Français</div>
     </div>
@@ -173,10 +216,8 @@
       <svg width="100" height="100">
         <circle cx="50" cy="50" r="45" stroke="#e0e0e0" stroke-width="10" fill="none" />
         <circle cx="50" cy="50" r="45" stroke="#3498db" stroke-width="10" fill="none"
-                stroke-dasharray="283"
-                stroke-dashoffset="14"
-                transform="rotate(-90 50 50)" />
-        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="#2c3e50">Fluent</text>
+                stroke-dasharray="283" stroke-dashoffset="14" transform="rotate(-90 50 50)" />
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="#2c3e50">Pro</text>
       </svg>
       <div style="text-align: center;">Anglais</div>
     </div>
@@ -185,18 +226,16 @@
       <svg width="100" height="100">
         <circle cx="50" cy="50" r="45" stroke="#e0e0e0" stroke-width="10" fill="none" />
         <circle cx="50" cy="50" r="45" stroke="#3498db" stroke-width="10" fill="none"
-                stroke-dasharray="283"
-                stroke-dashoffset="0"
-                transform="rotate(-90 50 50)" />
+                stroke-dasharray="283" stroke-dashoffset="0" transform="rotate(-90 50 50)" />
         <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="#2c3e50">Native</text>
       </svg>
       <div style="text-align: center;">Thaï</div>
     </div>
-
   </div>
 </div>
 
-
-
+<script>
+  lucide.createIcons();
+</script>
 </body>
 </html>
