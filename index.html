@@ -149,6 +149,56 @@
     .download-btn:hover {
       background-color: #2980b9;
     }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Force 4 columns */
+  gap: 30px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+
+.skill-group h3 {
+  color: #2c3e50;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.skill {
+  margin-bottom: 12px;
+}
+
+.skill span {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.bar {
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  background-color: #3498db;
+  height: 100%;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
   </style>
 </head>
 <body>
@@ -230,12 +280,39 @@
   </div>
 
   <h2><i data-lucide="settings"></i> Compétences</h2>
-  <ul>
-    <li><strong>Business Intelligence:</strong> Power BI, Grafana, Tableau, Qlik Sense</li>
-    <li><strong>Data Engineering:</strong> SQL Server, PostgreSQL, Oracle, Talend, SSIS, Dataform</li>
-    <li><strong>Cloud & Automatisation:</strong> Azure Data Factory, Power Automate</li>
-    <li><strong>Langages & ML:</strong> Python, R, Scikit-Learn, TensorFlow</li>
-  </ul>
+  <div class="skills-grid">
+  <div class="skill-group">
+    <h3>Business Intelligence</h3>
+    <div class="skill"><span>Power BI</span><div class="bar"><div class="fill" style="width: 95%;"></div></div></div>
+    <div class="skill"><span>Grafana</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></div>
+    <div class="skill"><span>Tableau</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></div>
+    <div class="skill"><span>Qlik Sense</span><div class="bar"><div class="fill" style="width: 70%;"></div></div></div>
+  </div>
+
+  <div class="skill-group">
+    <h3>Data Engineering</h3>
+    <div class="skill"><span>SQL Server</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></div>
+    <div class="skill"><span>PostgreSQL</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></div>
+    <div class="skill"><span>Oracle</span><div class="bar"><div class="fill" style="width: 75%;"></div></div></div>
+    <div class="skill"><span>Talend</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></div>
+    <div class="skill"><span>SSIS</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></div>
+    <div class="skill"><span>Dataform</span><div class="bar"><div class="fill" style="width: 70%;"></div></div></div>
+  </div>
+
+  <div class="skill-group">
+    <h3>Cloud & Automatisation</h3>
+    <div class="skill"><span>Azure Data Factory</span><div class="bar"><div class="fill" style="width: 75%;"></div></div></div>
+    <div class="skill"><span>Power Automate</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></div>
+  </div>
+
+  <div class="skill-group">
+    <h3>Langages & ML</h3>
+    <div class="skill"><span>Python</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></div>
+    <div class="skill"><span>R</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></div>
+    <div class="skill"><span>Scikit-Learn</span><div class="bar"><div class="fill" style="width: 75%;"></div></div></div>
+    <div class="skill"><span>TensorFlow</span><div class="bar"><div class="fill" style="width: 70%;"></div></div></div>
+  </div>
+</div>
 
   <h2><i data-lucide="users"></i> Soft Skills</h2>
   <ul>
