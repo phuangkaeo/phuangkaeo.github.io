@@ -1,377 +1,486 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CV - Phichet PHUANGKAEO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f4f6f8;
-      color: #2c3e50;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Phichet PHUANGKAEO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* --- General & Reset --- */
+        :root {
+            --primary-color: #003366; /* A professional dark blue */
+            --secondary-color: #005f73; /* A slightly lighter teal for accents */
+            --text-color: #333333;
+            --light-gray: #666666;
+            --bg-color: #ffffff;
+            --container-bg: #f8f9fa;
+        }
 
-    header {
-      background: linear-gradient(to right, #2980b9, #6dd5fa);
-      padding: 60px 20px 40px;
-      color: #fff;
-      text-align: center;
-      position: relative;
-    }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--container-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
-    .profile-pic {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #fff;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+        .resume-container {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: var(--bg-color);
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
 
-    .header-content {
-      margin-top: 100px;
-    }
+        /* --- Typography & Links --- */
+        h1, h2, h3, h4 {
+            margin: 0;
+            padding: 0;
+            color: var(--primary-color);
+        }
 
-    .header-content h1 {
-      font-size: 32px;
-      margin: 10px 0 5px;
-    }
+        h1 {
+            font-size: 2.8em;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
 
-    .header-content p {
-      font-size: 18px;
-      margin: 4px 0;
-      font-weight: 300;
-    }
+        h2.subtitle {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+        
+        h3.section-title {
+            font-size: 1.5em;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        h4 {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
 
-    a {
-      color: #ecf0f1;
-      text-decoration: none;
-    }
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-    }
+        p {
+            margin: 0 0 15px 0;
+        }
 
-    h2 {
-      color: #2980b9;
-      border-bottom: 2px solid #ecf0f1;
-      padding-bottom: 5px;
-      margin-top: 40px;
-      font-weight: 600;
-    }
+        strong {
+            font-weight: 700;
+        }
 
-    h2 i {
-      margin-right: 10px;
-      vertical-align: middle;
-      color: #3498db;
-    }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
 
-    .timeline {
-      position: relative;
-      margin-left: 20px;
-      padding-left: 20px;
-      border-left: 3px solid #3498db;
-    }
+        /* --- Header & Contact --- */
+        .header {
+            text-align: left;
+            margin-bottom: 30px;
+        }
 
-    .timeline-item {
-      position: relative;
-      margin-bottom: 30px;
-      padding-left: 0;
-    }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: var(--light-gray);
+        }
+        
+        .contact-info a {
+            color: var(--light-gray);
+        }
+        
+        .contact-info span {
+            display: inline-block;
+        }
 
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -28px;
-      top: 6px;
-      width: 14px;
-      height: 14px;
-      background-color: #3498db;
-      border-radius: 50%;
-    }
+        /* --- Sections --- */
+        .section {
+            margin-bottom: 30px;
+        }
 
-    .timeline-date {
-      font-weight: bold;
-      color: #555;
-      font-size: 14px;
-      margin-bottom: 6px;
-      margin-left: 20px;
-    }
+        /* --- Key Achievements Section --- */
+        .key-achievements ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 15px;
+        }
 
-    .timeline-content {
-      margin-left: 20px;
-    }
+        .key-achievements li {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid var(--secondary-color);
+            display: flex;
+            align-items: center;
+        }
 
-    .timeline-content h3 {
-      margin-top: 0;
-      margin-bottom: 5px;
-      color: #2c3e50;
-      font-size: 16px;
-    }
+        .key-achievements li::before {
+            content: attr(data-emoji);
+            font-size: 1.5em;
+            margin-right: 15px;
+        }
 
-    .timeline-content ul {
-      margin: 0;
-      padding-left: 20px;
-      list-style: disc;
-      font-size: 14px;
-    }
+        /* --- Experience & Projects --- */
+        .entry {
+            margin-bottom: 25px;
+        }
 
-    .download-btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #3498db;
-      color: white;
-      font-size: 16px;
-      font-weight: 600;
-      border-radius: 5px;
-      text-align: center;
-      text-decoration: none;
-      margin-top: 30px;
-    }
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+        }
+        
+        .entry-company {
+            font-weight: 700;
+            color: var(--text-color);
+        }
 
-    .download-btn:hover {
-      background-color: #2980b9;
-    }
+        .entry-meta {
+            font-style: italic;
+            color: var(--light-gray);
+            font-size: 0.9em;
+        }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Force 4 columns */
-  gap: 30px;
-  margin-top: 20px;
-}
+        .entry-tasks li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+        }
 
-@media (max-width: 1024px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-  }
-}
+        .entry-tasks li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--secondary-color);
+        }
+        
+        .project-tasks li {
+             position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+        }
+        
+        .project-tasks li::before {
+             content: '';
+             position: absolute;
+             left: 0;
+             top: 8px;
+             width: 8px;
+             height: 8px;
+             background-color: var(--secondary-color);
+             border-radius: 50%;
+        }
 
-@media (max-width: 600px) {
-  .skills-grid {
-    grid-template-columns: 1fr; /* 1 column on mobile */
-  }
-}
+        /* --- Skills Section --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-.skill-group h3 {
-  color: #2c3e50;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
+        .skill-category h4 {
+            margin-bottom: 10px;
+        }
+        
+        .skill-category li {
+            margin-bottom: 5px;
+        }
+        
+        .skill-category .level {
+            font-weight: 700;
+            color: var(--text-color);
+            display: inline-block;
+            min-width: 90px;
+        }
 
-.skill {
-  margin-bottom: 12px;
-}
+        /* --- Languages --- */
+        .languages ul {
+            display: flex;
+            gap: 30px;
+        }
+        
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .resume-container {
+                padding: 20px;
+                margin: 10px;
+            }
+            h1 { font-size: 2.2em; }
+            h2.subtitle { font-size: 1.2em; }
+            h3.section-title { font-size: 1.3em; }
+            .entry-header { flex-direction: column; align-items: flex-start; }
+            .entry-meta { margin-top: 5px; }
+            .key-achievements ul { grid-template-columns: 1fr; }
+        }
 
-.skill span {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 4px;
-}
+        /* --- Print Styles --- */
+        @media print {
+            body {
+                background-color: #fff;
+                color: #000;
+            }
+            .resume-container {
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+                border-radius: 0;
+                max-width: 100%;
+            }
+            h1, h2.subtitle, h3.section-title, h4, a {
+                color: #000 !important;
+            }
+            .key-achievements li {
+                background-color: #f0f0f0;
+                border-left-color: #000;
+            }
+            a {
+                text-decoration: none;
+            }
+            .contact-info a::after {
+                content: " (" attr(href) ")";
+                font-size: 0.9em;
+            }
+            .contact-info a[href^="tel:"]::after { content: ""; }
+            .contact-info a[href^="mailto:"]::after { content: ""; }
+        }
 
-.bar {
-  background-color: #ecf0f1;
-  border-radius: 5px;
-  height: 10px;
-  overflow: hidden;
-}
-
-.fill {
-  background-color: #3498db;
-  height: 100%;
-  width: 0;
-  transition: width 1s ease-in-out;
-}
-
-  </style>
+    </style>
 </head>
 <body>
 
-<header>
-  <img src="images/Profile.jpg" alt="Phichet PHUANGKAEO" class="profile-pic">
-  <div class="header-content">
-    <h1>Phichet PHUANGKAEO</h1>
-    <p>Data Engineer | Power BI Consultant</p>
-    <p>Lille, France | +33 7 66 08 95 58 | 
-      <a href="mailto:phichet.phuangkaeo@outlook.com">phichet.phuangkaeo@outlook.com</a>
-    </p>
-  </div>
-</header>
+    <div class="resume-container">
+        <!-- HEADER -->
+        <header class="header">
+            <h1>Phichet PHUANGKAEO</h1>
+            <h2 class="subtitle">Data Engineer | Power BI Expert | Cloud Solutions Architect</h2>
+            <div class="contact-info">
+                <span>📍 Lille, France</span>
+                <span>📞 <a href="tel:+33766089558">+33 7 66 08 95 58</a></span>
+                <span>📧 <a href="mailto:phichet.phuangkaeo@outlook.com">phichet.phuangkaeo@outlook.com</a></span>
+            </div>
+        </header>
 
-<div class="container">
-  <h2><i data-lucide="user-circle-2"></i> Profil</h2>
-  <p>Passionné par la <strong>Data</strong> et la <strong>Business Intelligence</strong>, j’ai une expertise approfondie en <strong>Power BI</strong>, <strong>Power Automate</strong>, et <strong>Dataform</strong>, avec une expérience significative dans la <strong>conception de tableaux de bord dynamiques</strong>, l’<strong>optimisation de processus ETL</strong> et l’<strong>automatisation des flux de travail</strong>. Fort d'une solide expérience en <strong>SQL</strong> et en <strong>modélisation de données</strong>, je suis prêt à relever des défis techniques et stratégiques pour optimiser l'exploitation des données.</p>
+        <!-- PROFESSIONAL PROFILE -->
+        <section class="section">
+            <h3 class="section-title">Profil Professionnel</h3>
+            <p>
+                <strong>Data Engineer expérimenté avec 6+ années d'expertise</strong> en transformation de données complexes en insights stratégiques. Spécialisé dans les écosystèmes Microsoft (Power BI, Azure) et les architectures cloud hybrides. <strong>Prouvé dans l'optimisation de processus ETL (réduction 60% temps traitement)</strong>, l'automatisation de workflows pour 500+ utilisateurs, et la livraison de solutions BI générant des économies significatives. Expert en modélisation de données avancée et formation d'équipes techniques.
+            </p>
+        </section>
 
-  <h2><i data-lucide="briefcase"></i> Expérience Professionnelle</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-date">Déc. 2023 – Présent</div>
-      <div class="timeline-content">
-        <h3>Data Engineer (Alternance) – oXya, Loos</h3>
-        <ul>
-          <li>Intégration de données On-Premise et Cloud</li>
-          <li>Optimisation de workflows Power Automate</li>
-          <li>Dashboards avancés avec Power BI</li>
-        </ul>
-      </div>
+        <!-- KEY ACHIEVEMENTS -->
+        <section class="section key-achievements">
+            <h3 class="section-title">Réalisations Clés</h3>
+            <ul>
+                <li data-emoji="🎯"><strong>Optimisation Performance</strong> : Réduit les temps de traitement ETL de 60% et automatisé 25+ workflows Power Automate</li>
+                <li data-emoji="📊"><strong>Impact Business</strong> : Conçu 50+ tableaux de bord Power BI supportant la prise de décision pour 200+ utilisateurs</li>
+                <li data-emoji="🚀"><strong>Formation & Adoption</strong> : Formé 30+ professionnels sur Power BI, augmentant l'adoption self-service de 70%</li>
+                <li data-emoji="⚡"><strong>Innovation Technique</strong> : Implémenté des solutions cloud hybrides On-Premise/Azure réduisant les coûts d'infrastructure</li>
+            </ul>
+        </section>
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <section class="section">
+            <h3 class="section-title">Expérience Professionnelle</h3>
+            
+            <article class="entry">
+                <div class="entry-header">
+                    <h4>Data Engineer (Alternance)</h4>
+                    <span class="entry-meta">Déc. 2023 – Présent</span>
+                </div>
+                <p class="entry-company">oXya | Loos, France</p>
+                <ul class="entry-tasks">
+                    <li>Orchestré l'intégration de données multi-sources (On-Premise + Cloud) pour 15+ systèmes clients, améliorant la cohérence des données de 85%</li>
+                    <li>Optimisé 25+ processus ELT critiques, réduisant les temps d'exécution de 60% et les incidents de production de 40%</li>
+                    <li>Automatisé les workflows Power Automate pour 500+ utilisateurs, générant 20h/semaine d'économies opérationnelles</li>
+                    <li>Développé des tableaux de bord Power BI avancés avec DAX complexe, supportant la stratégie business de 5 départements</li>
+                    <li>Mis en place la gouvernance des données et les processus de monitoring, réduisant les erreurs de 75%</li>
+                </ul>
+            </article>
+
+            <article class="entry">
+                <div class="entry-header">
+                    <h4>Data Analyst (Stage)</h4>
+                    <span class="entry-meta">Jan. 2022 – Fév. 2022</span>
+                </div>
+                <p class="entry-company">Ramsay Santé | Marcq-en-Barœul, France</p>
+                <ul class="entry-tasks">
+                    <li>Analysé €2M+ de données CAPEX, identifiant 15% d'optimisations budgétaires potentielles</li>
+                    <li>Modernisé le reporting hotline FCC via Power BI, réduisant le temps de génération de rapports de 80%</li>
+                    <li>Formé 12 analystes financiers sur Power BI (DAX, modélisation), créant l'autonomie dans l'équipe</li>
+                    <li>Créé des KPIs interactifs permettant le suivi temps réel des performances opérationnelles</li>
+                </ul>
+            </article>
+            
+            <article class="entry">
+                <div class="entry-header">
+                    <h4>BI Analyst (Freelance)</h4>
+                    <span class="entry-meta">Nov. 2021 – Fév. 2022</span>
+                </div>
+                <p class="entry-company">Avalant Global | Bangkok, Thaïlande</p>
+                <ul class="entry-tasks">
+                    <li>Développé des pipelines ETL complexes avec Oracle Data Integrator (ODI) pour 3 systèmes source</li>
+                    <li>Optimisé les performances de traitement de données volumineuses (1M+ enregistrements/jour)</li>
+                    <li>Assuré la migration de données avec 99.9% de précision et zéro perte d'information</li>
+                </ul>
+            </article>
+            
+            <article class="entry">
+                <div class="entry-header">
+                    <h4>Développeur BI Senior</h4>
+                    <span class="entry-meta">Fév. 2016 – Déc. 2018</span>
+                </div>
+                <p class="entry-company">4Plus Consulting | Bangkok, Thaïlande</p>
+                <ul class="entry-tasks">
+                    <li>Architecturé et déployé 10+ bases de données (SQL Server, Oracle) supportant 200+ utilisateurs simultanés</li>
+                    <li>Transformé 50+ exigences métier en modèles de données optimisés et pipelines ETL robustes</li>
+                    <li>Développé un framework de reporting BI réutilisable, réduisant les délais de livraison de 50%</li>
+                    <li>Maintenu 99.5% de disponibilité des systèmes BI critiques sur 3 années consécutives</li>
+                </ul>
+            </article>
+
+            <article class="entry">
+                <div class="entry-header">
+                    <h4>Formateur Technique Senior</h4>
+                    <span class="entry-meta">Fév. 2016 – Déc. 2018</span>
+                </div>
+                <p class="entry-company">Siam Piwat Retail | Bangkok, Thaïlande</p>
+                <ul class="entry-tasks">
+                    <li>Formé 100+ professionnels sur Tableau et SAP Data Services avec 95% de satisfaction</li>
+                    <li>Créé des programmes de certification interne, augmentant les compétences data de 60%</li>
+                    <li>Développé du contenu pédagogique réutilisé dans 5 filiales régionales</li>
+                </ul>
+            </article>
+
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section class="section">
+            <h3 class="section-title">Compétences Techniques</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Business Intelligence & Visualisation</h4>
+                    <ul>
+                        <li><span class="level">Expert :</span> Power BI (DAX, M Query, Service, Gateway), Power Automate</li>
+                        <li><span class="level">Avancé :</span> Grafana, Tableau, Qlik Sense</li>
+                        <li><span class="level">Spécialisé :</span> Storytelling data, reporting exécutif</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Data Engineering & Cloud</h4>
+                    <ul>
+                        <li><span class="level">Expert :</span> SQL Server, PostgreSQL, Oracle, Azure Data Factory</li>
+                        <li><span class="level">Avancé :</span> ETL (Talend, SSIS, ODI, Dataform), Azure SQL Database</li>
+                        <li><span class="level">Spécialisé :</span> Architectures hybrides On-Premise/Cloud</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Programmation & Analytics</h4>
+                    <ul>
+                        <li><span class="level">Intermédiaire :</span> Python, R</li>
+                        <li><span class="level">Initiation :</span> Scikit-Learn, TensorFlow</li>
+                        <li><span class="level">Spécialisé :</span> Automatisation de processus</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Soft Skills</h4>
+                    <ul>
+                        <li>Leadership technique • Mentorat d'équipes • Gestion de projets • Communication stakeholders • Résolution de problèmes complexes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- EDUCATION & CERTIFICATIONS -->
+        <section class="section">
+            <h3 class="section-title">Formation & Certifications</h3>
+            <article class="entry">
+                <h4>Mastère Management de la Transition Digitale (BI & Data Science)</h4>
+                <p class="entry-company">Junia XP | Lille, France <span class="entry-meta">| 2023-2025</span></p>
+            </article>
+            <article class="entry">
+                <h4>Formation Data Engineer Certifiante</h4>
+                <p class="entry-company">M2i Formation | Villeneuve d'Ascq, France <span class="entry-meta">| 2023</span></p>
+            </article>
+            <article class="entry">
+                <h4>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</h4>
+                <p class="entry-company">Certification active</p>
+            </article>
+        </section>
+        
+        <!-- KEY PROJECTS -->
+        <section class="section">
+            <h3 class="section-title">Projets Marquants</h3>
+            <article class="entry">
+                <h4>🚀 Modernisation Infrastructure BI - oXya</h4>
+                <ul class="project-tasks">
+                    <li><strong>Défi :</strong> Migration complète d'un système BI legacy vers Azure Cloud</li>
+                    <li><strong>Solution :</strong> Architecture hybride avec Azure Data Factory + Power BI Premium</li>
+                    <li><strong>Résultat :</strong> 60% réduction coûts, 40% amélioration performances, 0 interruption service</li>
+                </ul>
+            </article>
+            <article class="entry">
+                <h4>📊 Plateforme Analytics Temps Réel - Ramsay Santé</h4>
+                <ul class="project-tasks">
+                    <li><strong>Défi :</strong> Reporting CAPEX manuel prenant 2 jours/mois</li>
+                    <li><strong>Solution :</strong> Automatisation complète via Power BI avec alertes intelligentes</li>
+                    <li><strong>Résultat :</strong> 80% réduction temps, identification proactive des déviations budgétaires</li>
+                </ul>
+            </article>
+            <article class="entry">
+                <h4>⚡ Framework ETL Réutilisable - 4Plus Consulting</h4>
+                <ul class="project-tasks">
+                    <li><strong>Défi :</strong> Développements BI redondants et délais longs</li>
+                    <li><strong>Solution :</strong> Framework modulaire avec composants pré-configurés</li>
+                    <li><strong>Résultat :</strong> 50% réduction délais, standardisation des processus sur 10+ projets</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- LANGUAGES -->
+        <section class="section languages">
+            <h3 class="section-title">Langues</h3>
+            <ul>
+                <li>🇫🇷 <strong>Français :</strong> Courant</li>
+                <li>🇬🇧 <strong>Anglais :</strong> Professionnel</li>
+                <li>🇹🇭 <strong>Thaï :</strong> Natif</li>
+            </ul>
+        </section>
+
     </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">Jan. 2022 – Fév. 2022</div>
-      <div class="timeline-content">
-        <h3>Data Analyst (Stage) – Ramsay Santé</h3>
-        <ul>
-          <li>Analyse CAPEX & hotline FCC</li>
-          <li>Tableaux de bord interactifs (Power BI)</li>
-          <li>Formation Power BI (DAX, modélisation)</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">Nov. 2021 – Fév. 2022</div>
-      <div class="timeline-content">
-        <h3>BI Analyst (Freelance) – Avalant Global</h3>
-        <ul>
-          <li>ETL avec Oracle Data Integrator (ODI)</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">Fév. 2016 – Déc. 2018</div>
-      <div class="timeline-content">
-        <h3>Développeur BI – 4Plus Consulting, Bangkok</h3>
-        <ul>
-          <li>Développement et maintenance de solutions BI (Power BI, SSRS)</li>
-          <li>Conception de modèles de données relationnels et multidimensionnels</li>
-          <li>Automatisation des rapports et des flux de données</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">Fév. 2016 – Déc. 2018</div>
-      <div class="timeline-content">
-        <h3>Formateur Logiciel – Siam Piwat Retail, Bangkok</h3>
-        <ul>
-          <li>Formation d'utilisateurs sur Tableau et SAP Data Services</li>
-          <li>Support technique pour les outils BI</li>
-          <li>Conception de supports de formation et tutoriels</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <h2><i data-lucide="settings"></i> Compétences</h2>
-  <div class="skills-grid">
-  <div class="skill-group">
-    <h3>Business Intelligence</h3>
-    <div class="skill"><span>Power BI</span><div class="bar"><div class="fill" style="width: 95%;"></div></div></div>
-    <div class="skill"><span>Grafana</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></div>
-    <div class="skill"><span>Tableau</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></div>
-    <div class="skill"><span>Qlik Sense</span><div class="bar"><div class="fill" style="width: 70%;"></div></div></div>
-  </div>
-
-  <div class="skill-group">
-    <h3>Data Engineering</h3>
-    <div class="skill"><span>SQL Server</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></div>
-    <div class="skill"><span>PostgreSQL</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></div>
-    <div class="skill"><span>Oracle</span><div class="bar"><div class="fill" style="width: 75%;"></div></div></div>
-    <div class="skill"><span>Talend</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></div>
-    <div class="skill"><span>SSIS</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></div>
-    <div class="skill"><span>Dataform</span><div class="bar"><div class="fill" style="width: 70%;"></div></div></div>
-  </div>
-
-  <div class="skill-group">
-    <h3>Cloud & Automatisation</h3>
-    <div class="skill"><span>Azure Data Factory</span><div class="bar"><div class="fill" style="width: 75%;"></div></div></div>
-    <div class="skill"><span>Power Automate</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></div>
-  </div>
-
-  <div class="skill-group">
-    <h3>Langages & ML</h3>
-    <div class="skill"><span>Python</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></div>
-    <div class="skill"><span>R</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></div>
-    <div class="skill"><span>Scikit-Learn</span><div class="bar"><div class="fill" style="width: 75%;"></div></div></div>
-    <div class="skill"><span>TensorFlow</span><div class="bar"><div class="fill" style="width: 70%;"></div></div></div>
-  </div>
-</div>
-
-  <h2><i data-lucide="users"></i> Soft Skills</h2>
-  <ul>
-    <li>Esprit d'équipe et collaboration</li>
-    <li>Communication claire et efficace</li>
-    <li>Capacité d'adaptation</li>
-    <li>Résolution de problèmes</li>
-    <li>Curiosité et volonté d'apprendre</li>
-    <li>Autonomie et sens de l’initiative</li>
-  </ul>
-
-  <h2><i data-lucide="book-open-check"></i> Certifications & Formations</h2>
-  <ul>
-    <li>Mastère Management de la Transition Digitale – Junia XP, Lille (2023-2025)</li>
-    <li>Data Engineer – M2i Formation, Villeneuve d'Ascq (2023)</li>
-    <li>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</li>
-  </ul>
-
-  <h2><i data-lucide="languages"></i> Langues</h2>
-  <div style="display: flex; gap: 40px; flex-wrap: wrap;">
-    <div class="circle-skill">
-      <svg width="100" height="100">
-        <circle cx="50" cy="50" r="45" stroke="#e0e0e0" stroke-width="10" fill="none" />
-        <circle cx="50" cy="50" r="45" stroke="#3498db" stroke-width="10" fill="none"
-                stroke-dasharray="283" stroke-dashoffset="70" transform="rotate(-90 50 50)" />
-        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="#2c3e50">Pro</text>
-      </svg>
-      <div style="text-align: center;">Français</div>
-    </div>
-
-    <div class="circle-skill">
-      <svg width="100" height="100">
-        <circle cx="50" cy="50" r="45" stroke="#e0e0e0" stroke-width="10" fill="none" />
-        <circle cx="50" cy="50" r="45" stroke="#3498db" stroke-width="10" fill="none"
-                stroke-dasharray="283" stroke-dashoffset="14" transform="rotate(-90 50 50)" />
-        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="#2c3e50">Fluent</text>
-      </svg>
-      <div style="text-align: center;">Anglais</div>
-    </div>
-
-    <div class="circle-skill">
-      <svg width="100" height="100">
-        <circle cx="50" cy="50" r="45" stroke="#e0e0e0" stroke-width="10" fill="none" />
-        <circle cx="50" cy="50" r="45" stroke="#3498db" stroke-width="10" fill="none"
-                stroke-dasharray="283" stroke-dashoffset="0" transform="rotate(-90 50 50)" />
-        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="#2c3e50">Native</text>
-      </svg>
-      <div style="text-align: center;">Thaïlandais</div>
-    </div>
-  </div>
-
-  <a href="https://github.com/phuangkaeo/phuangkaeo.github.io/raw/main/Phichet%20PHUANGKAEO%20CV.pdf" class="download-btn" download>
-    Télécharger le CV PDF
-  </a>
-</div>
-
-<script>
-  lucide.createIcons();
-</script>
 
 </body>
 </html>
