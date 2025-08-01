@@ -139,6 +139,39 @@
             .timeline-box::before { display: none; }
             .timeline-date { position: static; width: auto; text-align: left !important; margin-top: 5px; }
         }
+
+        /* --- PDF Download Button Styles --- */
+        .download-pdf {
+            text-align: center;
+            margin-top: 40px;
+            padding-bottom: 10px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px; /* Spaces the icon and text */
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 8px;
+            border: none;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 15px rgba(233, 75, 99, 0.2);
+        }
+
+        .download-btn:hover {
+            background-color: #d13c54; /* A slightly darker version of your primary color */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(233, 75, 99, 0.3);
+        }
+        /* --- End of PDF Download Styles --- */
+
+        @media (max-width: 768px) {
     </style>
 </head>
 <body>
@@ -316,7 +349,7 @@
                                 <circle class="progress-arc arc-french" cx="60" cy="60" r="54" />
                             </svg>
                             <div class="language-text">
-                                Français
+                                Français 🇫🇷
                                 <span>Professionnel</span>
                             </div>
                         </div>
@@ -328,7 +361,7 @@
                                 <circle class="progress-arc arc-english" cx="60" cy="60" r="54" />
                             </svg>
                             <div class="language-text">
-                                Anglais
+                                Anglais 🇬🇧
                                 <span>Courant</span>
                             </div>
                         </div>
@@ -340,13 +373,21 @@
                                 <circle class="progress-arc arc-thai" cx="60" cy="60" r="54" />
                             </svg>
                             <div class="language-text">
-                                Thaï
+                                Thaï 🇹🇭
                                 <span>Natif</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- ======================= PDF DOWNLOAD SECTION ======================= -->
+            <section class="download-pdf">
+                <a href="https://github.com/phuangkaeo/phuangkaeo.github.io/raw/main/CV.pdf" class="download-btn" download="Phichet_Phuangkaeo_Resume.pdf">
+                    <i class="fa-solid fa-download"></i>
+                    Télécharger en PDF
+                </a>
+            </section>
+
         </main>
     </div>
 
