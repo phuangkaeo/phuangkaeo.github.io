@@ -147,6 +147,15 @@
             .timeline-box::before { display: none; }
             .timeline-date { position: static; width: auto; text-align: left !important; margin-top: 5px; }
             .languages-container { grid-template-columns: 1fr; gap: 15px; }
+            .key-achievements-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .skills-container { flex-direction: column; }
+            .skill-category { min-width: auto; }
+            .nav-bar { padding: 0 10px; margin: 15px 0; }
+            .language-chart-wrapper { width: 100px; height: 100px; }
+            .language-svg { width: 90px; height: 90px; }
+            .language-text { font-size: 0.85em; }
+            .language-text span { font-size: 0.7em; }
         }
 
         /* --- PDF Download Button Styles --- */
@@ -178,9 +187,22 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(233, 75, 99, 0.3);
         }
-        /* --- End of PDF Download Styles --- */
-
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
+            .resume-container { padding: 15px; margin: 10px; }
+            .nav-bar { padding: 0 5px; }
+            .nav-link { font-size: 0.8em; padding: 3px; }
+            .section-title { font-size: 1.3em; }
+            .achievement-card { padding: 15px; flex-direction: column; text-align: center; }
+            .achievement-card .icon { width: 30px; height: 30px; }
+            .timeline-box { padding: 15px; padding-left: 35px; }
+            .skill-category { padding: 15px; }
+            .education-item { flex-direction: column; text-align: center; gap: 10px; }
+            .contact-card { padding: 15px; flex-direction: column; text-align: center; }
+            .language-chart-wrapper { width: 80px; height: 80px; }
+            .language-svg { width: 70px; height: 70px; }
+            .language-text { font-size: 0.75em; }
+            .language-text span { font-size: 0.65em; }
+        }
     </style>
 </head>
 <body>
