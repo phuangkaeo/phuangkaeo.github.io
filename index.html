@@ -85,15 +85,14 @@
         .timeline-content ul { list-style: none; padding-left: 0; }
         .timeline-content li { position: relative; padding-left: 25px; margin-bottom: 8px; font-size: 0.95em; }
 
-        /* --- UPDATED BULLET POINT TO NEW SVG MASK --- */
         .timeline-content li::before {
             content: '';
             position: absolute;
             left: 0;
-            top: 6px; /* Adjust vertical alignment */
+            top: 6px; 
             width: 12px;
             height: 12px;
-            background-color: var(--primary-color); /* The color of the bullet */
+            background-color: var(--primary-color);
             -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 10'%3e%3cpath d='M5.66549 2.91671C5.44484 2.91671 5.26431 3.10421 5.26431 3.33337V4.58337H4.06077C3.84012 4.58337 3.65959 4.77087 3.65959 5.00004C3.65959 5.22921 3.84012 5.41671 4.06077 5.41671H5.26431V6.66671C5.26431 6.89587 5.44484 7.08337 5.66549 7.08337C5.88614 7.08337 6.06667 6.89587 6.06667 6.66671V5.41671H7.27021C7.49086 5.41671 7.67139 5.22921 7.67139 5.00004C7.67139 4.77087 7.49086 4.58337 7.27021 4.58337H6.06667V3.33337C6.06667 3.10421 5.88614 2.91671 5.66549 2.91671ZM5.66549 0.833374C3.45498 0.833374 1.65369 2.70421 1.65369 5.00004C1.65369 7.29587 3.45498 9.16671 5.66549 9.16671C7.87599 9.16671 9.67729 7.29587 9.67729 5.00004C9.67729 2.70421 7.87599 0.833374 5.66549 0.833374ZM5.66549 8.33337C3.89628 8.33337 2.45605 6.83754 2.45605 5.00004C2.45605 3.16254 3.89628 1.66671 5.66549 1.66671C7.43469 1.66671 8.87493 3.16254 8.87493 5.00004C8.87493 6.83754 7.43469 8.33337 5.66549 8.33337Z' fill='black'/%3e%3c/svg%3e");
             mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 10'%3e%3cpath d='M5.66549 2.91671C5.44484 2.91671 5.26431 3.10421 5.26431 3.33337V4.58337H4.06077C3.84012 4.58337 3.65959 4.77087 3.65959 5.00004C3.65959 5.22921 3.84012 5.41671 4.06077 5.41671H5.26431V6.66671C5.26431 6.89587 5.44484 7.08337 5.66549 7.08337C5.88614 7.08337 6.06667 6.89587 6.06667 6.66671V5.41671H7.27021C7.49086 5.41671 7.67139 5.22921 7.67139 5.00004C7.67139 4.77087 7.49086 4.58337 7.27021 4.58337H6.06667V3.33337C6.06667 3.10421 5.88614 2.91671 5.66549 2.91671ZM5.66549 0.833374C3.45498 0.833374 1.65369 2.70421 1.65369 5.00004C1.65369 7.29587 3.45498 9.16671 5.66549 9.16671C7.87599 9.16671 9.67729 7.29587 9.67729 5.00004C9.67729 2.70421 7.87599 0.833374 5.66549 0.833374ZM5.66549 8.33337C3.89628 8.33337 2.45605 6.83754 2.45605 5.00004C2.45605 3.16254 3.89628 1.66671 5.66549 1.66671C7.43469 1.66671 8.87493 3.16254 8.87493 5.00004C8.87493 6.83754 7.43469 8.33337 5.66549 8.33337Z' fill='black'/%3e%3c/svg%3e");
             -webkit-mask-size: contain;
@@ -101,7 +100,6 @@
             -webkit-mask-repeat: no-repeat;
             mask-repeat: no-repeat;
         }
-        /* --- END OF UPDATED STYLE --- */
 
         .skills-container { display: flex; flex-wrap: wrap; gap: 15px; }
         .skill-category { flex: 1; min-width: 250px; padding: 20px; border-radius: 10px; color: var(--white); }
@@ -141,11 +139,35 @@
             .nav-links { gap: 10px; overflow-x: auto; padding: 5px 0; }
             .nav-link { font-size: 0.85em; padding: 5px; white-space: nowrap; }
             .resume-container { padding: 20px; margin: 15px; }
-            .timeline::before { left: 15px; transform: translateX(0); }
-            .timeline-item .timeline-circle { left: 15px; transform: translateX(-50%); }
-            .timeline-box { width: 100%; float: none !important; padding-left: 50px; margin-left: 0; }
-            .timeline-box::before { display: none; }
-            .timeline-date { position: static; width: auto; text-align: left !important; margin-top: 5px; margin-bottom: 10px; font-size: 0.9em; }
+            
+            /* --- TIMELINE FIX STARTS HERE --- */
+            .timeline::before {
+                left: 15px;
+                transform: translateX(0);
+            }
+            .timeline-item .timeline-circle {
+                left: 15px;
+                transform: translateX(-50%);
+            }
+            .timeline-box {
+                width: auto; /* Let the box fill remaining space */
+                float: none !important;
+                margin-left: 40px; /* Push the entire box to the right of the line */
+                padding: 20px; /* Use standard padding */
+            }
+            .timeline-box::before {
+                display: none; /* Hide the arrow pointer */
+            }
+            /* --- TIMELINE FIX ENDS HERE --- */
+            
+            .timeline-date {
+                position: static;
+                width: auto;
+                text-align: left !important;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                font-size: 0.9em;
+            }
             .languages-container { grid-template-columns: 1fr; gap: 15px; }
             .key-achievements-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
@@ -168,7 +190,7 @@
         .download-btn {
             display: inline-flex;
             align-items: center;
-            gap: 12px; /* Spaces the icon and text */
+            gap: 12px;
             background-color: var(--primary-color);
             color: var(--white);
             padding: 12px 25px;
@@ -183,7 +205,7 @@
         }
 
         .download-btn:hover {
-            background-color: #d13c54; /* A slightly darker version of your primary color */
+            background-color: #d13c54;
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(233, 75, 99, 0.3);
         }
@@ -196,7 +218,10 @@
             .achievement-card .icon { width: 30px; height: 30px; }
             .timeline::before { left: 12px; }
             .timeline-item .timeline-circle { left: 12px; }
-            .timeline-box { padding: 15px; padding-left: 40px; }
+            .timeline-box {
+                padding: 15px;
+                margin-left: 35px; /* Slightly reduce margin for the smallest screens */
+            }
             .timeline-date { margin-bottom: 8px; font-size: 0.85em; }
             .skill-category { padding: 15px; }
             .education-item { flex-direction: column; text-align: center; gap: 10px; }
@@ -467,7 +492,6 @@
                 </div>
             </section>
             
-            <!-- ======================= PDF DOWNLOAD SECTION ======================= -->
             <section class="download-pdf">
                 <a href="https://github.com/phuangkaeo/phuangkaeo.github.io/raw/main/CV.pdf" class="download-btn" download="Phichet_Phuangkaeo_Resume.pdf">
                     <i class="fa-solid fa-download"></i>
