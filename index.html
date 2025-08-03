@@ -116,7 +116,14 @@
         .education-item .icon { font-size: 1.5em; color: var(--primary-color); margin-top: 5px; }
         .education-item h3 { font-size: 1.1em; font-weight: 600; margin: 0; }
         .education-item p { font-size: 0.95em; color: var(--text-light); margin: 0; }
-        .languages-container { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; text-align: center; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .contact-card { background-color: var(--bg-light-gray); padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px; transition: transform 0.3s, box-shadow 0.3s; }
+        .contact-card:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .contact-card .icon { width: 24px; height: 24px; flex-shrink: 0; }
+        .contact-card h3 { font-size: 1em; font-weight: 600; margin: 0 0 5px 0; }
+        .contact-card p { font-size: 0.95em; color: var(--text-light); margin: 0; }
+        .contact-card a { color: var(--primary-color); text-decoration: none; }
+        .contact-card a:hover { text-decoration: underline; }
         .language-item { display: flex; flex-direction: column; align-items: center; }
         .language-chart-wrapper { position: relative; width: 130px; height: 130px; display: grid; place-items: center; }
         .language-svg { width: 120px; height: 120px; transform: rotate(-90deg); }
@@ -184,6 +191,7 @@
 
         <nav class="nav-bar">
             <ul class="nav-links">
+                <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li><a href="#achievements" class="nav-link">Réalisations</a></li>
                 <li><a href="#experience" class="nav-link">Expérience</a></li>
                 <li><a href="#skills" class="nav-link">Compétences</a></li>
@@ -193,6 +201,57 @@
         </nav>
 
         <main>
+            <section class="contact" id="contact">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <svg class="icon" viewBox="0 0 24 24" fill="var(--primary-color)" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:phichet.phuangkaeo@example.com">phichet.phuangkaeo@example.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <svg class="icon" viewBox="0 0 24 24" fill="var(--icon-blue)" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <svg class="icon" viewBox="0 0 24 24" fill="var(--tertiary-color)" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        <div>
+                            <h3>Localisation</h3>
+                            <p>Lille, France</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <svg class="icon" viewBox="0 0 24 24" fill="var(--icon-blue)" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://linkedin.com/in/phichet-phuangkaeo" target="_blank">linkedin.com/in/phichet-phuangkaeo</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <svg class="icon" viewBox="0 0 24 24" fill="var(--primary-color)" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <div>
+                            <h3>Portfolio</h3>
+                            <p><a href="https://phuangkaeo.github.io" target="_blank">phuangkaeo.github.io</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="summary">
                 <p>
                     <strong>Professionnel Data & BI avec 6 années d'expérience</strong> dans la transformation de données complexes en insights stratégiques. Spécialisé dans l'écosystème Microsoft (Power BI, Azure) et les architectures cloud hybrides. <strong>Expérience démontrée dans l'optimisation des processus ETL</strong>, l'automatisation de workflows, et la formation d'équipes techniques sur l'analyse en libre-service.
@@ -243,14 +302,7 @@
                             <div class="timeline-header">
                                <div class="timeline-title"><h3>Data Engineer (Alternance)</h3><p>oXya | Loos, France</p></div>
                             </div>
-                            <div class="timeline-content">
-                                <ul>
-                                    <li>Automatisation de workflows Power Automate, générant des économies de temps opérationnelles significatives</li>
-                                    <li>Développement de tableaux de bord Power BI avancés avec calculs DAX complexes.</li>
-                                    <li>Mise en place de processus de gouvernance des données et de monitoring, réduisant les erreurs de qualité des données</li>
-                                    <li>Collaboration avec les parties prenantes pour traduire les exigences métier en solutions techniques</li>
-                                </ul>
-                            </div>
+                            <div class="timeline-content"><ul><li>Automatisation de workflows Power Automate, générant des économies de temps opérationnelles significatives</li><li>Développement de tableaux de bord Power BI avancés avec calculs DAX complexes pour 5 départements</li><li>Mise en place de processus de gouvernance des données et de monitoring, réduisant les erreurs de qualité des données</li><li>Collaboration avec les parties prenantes pour traduire les exigences métier en solutions techniques</li></ul></div>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -260,14 +312,7 @@
                             <div class="timeline-header">
                                 <div class="timeline-title"><h3>Data Analyst (Stage)</h3><p>Ramsay Santé | Marcq-en-Barœul, France</p></div>
                             </div>
-                            <div class="timeline-content">
-                                <ul>
-                                    <li>Analyse de données CAPEX et identification d'opportunités d'optimisation budgétaire</li>
-                                    <li>Modernisation du système de reporting hotline FCC via Power BI, rationalisant les processus de génération de rapports</li>
-                                    <li>Formation de l'équipe finance sur les fondamentaux Power BI, incluant DAX et modélisation de données</li>
-                                    <li>Création de KPIs interactifs permettant le suivi des performances opérationnelles en temps réel</li>
-                                </ul>
-                            </div>
+                            <div class="timeline-content"><ul><li>Analyse de données CAPEX et identification d'opportunités d'optimisation budgétaire</li><li>Modernisation du système de reporting hotline FCC via Power BI, rationalisant les processus de génération de rapports</li><li>Formation de l'équipe finance sur les fondamentaux Power BI, incluant DAX et modélisation de données</li><li>Création de KPIs interactifs permettant le suivi des performances opérationnelles en temps réel</li></ul></div>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -277,13 +322,7 @@
                             <div class="timeline-header">
                                 <div class="timeline-title"><h3>BI Analyst (Freelance)</h3><p>Avalant Global | Bangkok, Thaïlande</p></div>
                             </div>
-                            <div class="timeline-content">
-                                <ul>
-                                    <li>Développement de pipelines ETL complexes utilisant Oracle Data Integrator (ODI)</li>
-                                    <li>Optimisation des performances de traitement pour de gros volumes de données</li>
-                                    <li>Gestion de projets de migration de données avec maintien de l'intégrité et temps d'arrêt minimal</li>
-                                </ul>
-                            </div>
+                            <div class="timeline-content"><ul><li>Développement de pipelines ETL complexes utilisant Oracle Data Integrator (ODI)</li><li>Optimisation des performances de traitement pour de gros volumes de données</li><li>Gestion de projets de migration de données avec maintien de l'intégrité et temps d'arrêt minimal</li></ul></div>
                         </div>
                     </div>
                      <div class="timeline-item">
@@ -293,14 +332,7 @@
                             <div class="timeline-header">
                                 <div class="timeline-title"><h3>Développeur BI</h3><p>4Plus Consulting | Bangkok, Thaïlande</p></div>
                             </div>
-                            <div class="timeline-content">
-                                <ul>
-                                    <li>Conception et déploiement de solutions de bases de données utilisant SQL Server et DB2 pour utilisateurs simultanés</li>
-                                    <li>Traduction d'exigences métier en modèles de données optimisés et pipelines ETL robustes</li>
-                                    <li>Développement d'un framework de reporting BI réutilisable, réduisant les délais de livraison des projets</li>
-                                    <li>Maintien d'une haute disponibilité système pour l'infrastructure BI critique</li>
-                                </ul>
-                            </div>
+                            <div class="timeline-content"><ul><li>Conception et déploiement de solutions de bases de données utilisant SQL Server et DB2 pour utilisateurs simultanés</li><li>Traduction d'exigences métier en modèles de données optimisés et pipelines ETL robustes</li><li>Développement d'un framework de reporting BI réutilisable, réduisant les délais de livraison des projets</li><li>Maintien d'une haute disponibilité système pour l'infrastructure BI critique</li></ul></div>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -310,12 +342,7 @@
                             <div class="timeline-header">
                                 <div class="timeline-title"><h3>Formateur Technique</h3><p>Siam Piwat Retail | Bangkok, Thaïlande</p></div>
                             </div>
-                            <div class="timeline-content">
-                                <ul>
-                                    <li>Formation de professionnels sur Tableau et SAP Data Services</li>
-                                    <li>Création de contenu pédagogique adopté dans plusieurs filiales régionales</li>
-                                </ul>
-                            </div>
+                            <div class="timeline-content"><ul><li>Formation de professionnels sur Tableau et SAP Data Services</li><li>Création de contenu pédagogique adopté dans plusieurs filiales régionales</li></ul></div>
                         </div>
                     </div>
                 </div>
