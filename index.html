@@ -315,3 +315,108 @@
             <section class="education" id="education">
                 <h2 class="section-title">Formation & Certifications</h2>
                 <ul class="education-list">
+                    <li class="education-item">
+                        <i class="fas fa-university icon"></i>
+                        <div>
+                            <h3>Mastère Management de la Transition Digitale (BI & Data Science)</h3>
+                            <p>Junia XP | Lille, France | 2023-2025</p>
+                        </div>
+                    </li>
+                    <li class="education-item">
+                        <i class="fas fa-university icon"></i>
+                        <div>
+                            <h3>Formation Data Engineer Certifiante</h3>
+                            <p>M2i Formation | Villeneuve d'Ascq, France | 2023</p>
+                        </div>
+                    </li>
+                    <li class="education-item">
+                        <i class="fas fa-certificate icon"></i>
+                        <div>
+                            <h3>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</h3>
+                            <p>Certification active</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="languages" id="languages">
+                <h2 class="section-title">Langues</h2>
+                <div class="languages-container">
+                    <div class="language-item">
+                        <div class="language-chart-wrapper">
+                            <svg viewBox="0 0 120 120" class="language-svg">
+                                <circle class="progress-track" cx="60" cy="60" r="54" />
+                                <circle class="progress-arc arc-french" cx="60" cy="60" r="54" />
+                            </svg>
+                            <div class="language-text">
+                                Français 🇫🇷
+                                <span>Professionnel</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-chart-wrapper">
+                            <svg viewBox="0 0 120 120" class="language-svg">
+                                <circle class="progress-track" cx="60" cy="60" r="54" />
+                                <circle class="progress-arc arc-english" cx="60" cy="60" r="54" />
+                            </svg>
+                            <div class="language-text">
+                                Anglais 🇬🇧
+                                <span>Courant</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-chart-wrapper">
+                            <svg viewBox="0 0 120 120" class="language-svg">
+                                <circle class="progress-track" cx="60" cy="60" r="54" />
+                                <circle class="progress-arc arc-thai" cx="60" cy="60" r="54" />
+                            </svg>
+                            <div class="language-text">
+                                Thaï 🇹🇭
+                                <span>Natif</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ======================= PDF DOWNLOAD SECTION ======================= -->
+            <section class="download-pdf">
+                <a href="https://github.com/phuangkaeo/phuangkaeo.github.io/raw/main/CV.pdf" class="download-btn" download="Phichet_Phuangkaeo_Resume.pdf">
+                    <i class="fa-solid fa-download"></i>
+                    Télécharger en PDF
+                </a>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navBar = document.querySelector('.nav-bar');
+            const navHeight = navBar.offsetHeight;
+
+            function changeNav() {
+                let index = sections.length;
+                while(--index && window.scrollY + navHeight + 20 < sections[index].offsetTop) {}
+                
+                navLinks.forEach((link) => link.classList.remove('active'));
+                
+                const currentSection = sections[index];
+                if (currentSection) {
+                    const activeLink = document.querySelector(`.nav-link[href="#${currentSection.id}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            }
+
+            changeNav();
+            window.addEventListener('scroll', changeNav);
+        });
+    </script>
+</body>
+</html>
