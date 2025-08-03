@@ -141,11 +141,11 @@
             .nav-links { gap: 10px; overflow-x: auto; padding: 5px 0; }
             .nav-link { font-size: 0.85em; padding: 5px; white-space: nowrap; }
             .resume-container { padding: 20px; margin: 15px; }
-            .timeline::before { left: 10px; transform: translateX(0); }
-            .timeline-item .timeline-circle { left: 10px; }
-            .timeline-box { width: 100%; float: none !important; padding-left: 40px; }
+            .timeline::before { left: 15px; transform: translateX(0); }
+            .timeline-item .timeline-circle { left: 15px; transform: translateX(-50%); }
+            .timeline-box { width: 100%; float: none !important; padding-left: 50px; margin-left: 0; }
             .timeline-box::before { display: none; }
-            .timeline-date { position: static; width: auto; text-align: left !important; margin-top: 5px; }
+            .timeline-date { position: static; width: auto; text-align: left !important; margin-top: 5px; margin-bottom: 10px; font-size: 0.9em; }
             .languages-container { grid-template-columns: 1fr; gap: 15px; }
             .key-achievements-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
@@ -194,7 +194,10 @@
             .section-title { font-size: 1.3em; }
             .achievement-card { padding: 15px; flex-direction: column; text-align: center; }
             .achievement-card .icon { width: 30px; height: 30px; }
-            .timeline-box { padding: 15px; padding-left: 35px; }
+            .timeline::before { left: 12px; }
+            .timeline-item .timeline-circle { left: 12px; }
+            .timeline-box { padding: 15px; padding-left: 40px; }
+            .timeline-date { margin-bottom: 8px; font-size: 0.85em; }
             .skill-category { padding: 15px; }
             .education-item { flex-direction: column; text-align: center; gap: 10px; }
             .contact-card { padding: 15px; flex-direction: column; text-align: center; }
