@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,33 +16,57 @@
 <body>
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">phuangkaeo<span>.</span></a>
-            <div class="nav-pill">
-                <a href="#skills" class="nav-link">Compétences</a>
-                <a href="#experience" class="nav-link">Expérience</a>
-                <a href="#projects" class="nav-link">Projets</a>
-                <a href="#education" class="nav-link">Formation</a>
-            </div>
-            <a href="#contact" class="nav-contact">Contact</a>
+            <a href="#home" class="logo">PHUANGKAEO<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#experience" class="nav-link">Expérience</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#education" class="nav-link">Formation</a></li>
+                <li><a href="#contact" class="btn-primary">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
     <main>
         <section id="home" class="hero">
+            <div class="hero-bg"></div>
             <div class="hero-container">
                 <div class="hero-content">
-                    <span class="badge">Disponible pour Alternance · MBA2</span>
+                    <span class="badge">Disponible pour Alternance (MBA2)</span>
                     <span class="sub-badge">Rythme : 1 sem. école / 3 sem. entreprise</span>
-                    <h1 class="hero-title">Phuangkaeo<br><span>Phichet</span></h1>
+                    <h1 class="hero-title">PHUANGKAEO <br><span>Phichet</span></h1>
                     <h2 class="hero-subtitle">Business Intelligence Consultant</h2>
-                    <p class="hero-desc">Plus de 6 ans d'expérience dans la conception de solutions décisionnelles,
-                        Data Warehouses et reporting analytique. Certifié Microsoft PL-300, spécialisé Power BI, SQL,
-                        ETL et gouvernance des données — Finance, Santé, Retail et SAP ERP.</p>
+                    <p class="hero-desc">Plus de 6 ans d'expérience dans la conception de solutions décisionnelles, Data
+                        Warehouses et reporting analytique. Certifié Microsoft PL-300, spécialisé Power BI, SQL, ETL et
+                        gouvernance des données. Expérience Finance, Santé, Retail et SAP ERP — je transforme des
+                        données complexes en indicateurs qui font avancer la décision.</p>
+
+                    <div class="kpi-strip">
+                        <div class="kpi-cell">
+                            <span class="kpi-value">6+</span>
+                            <span class="kpi-label">ans d'expérience</span>
+                        </div>
+                        <div class="kpi-cell">
+                            <span class="kpi-value">30+</span>
+                            <span class="kpi-label">dashboards Power BI</span>
+                        </div>
+                        <div class="kpi-cell">
+                            <span class="kpi-value">200+</span>
+                            <span class="kpi-label">utilisateurs servis</span>
+                        </div>
+                        <div class="kpi-cell">
+                            <span class="kpi-value">-40%</span>
+                            <span class="kpi-label">délais de reporting</span>
+                        </div>
+                    </div>
+
                     <div class="hero-buttons">
                         <a href="https://medium.com/@phichet.phuangkaeo/its-about-machine-learning-46cc2f6b2dfe"
-                            target="_blank" class="btn-dark">Article sur Medium</a>
-                        <a href="https://github.com/phuangkaeo/house_loan_analysis/blob/main/Lend2-2.ipynb" target="_blank" class="btn-outline">Voir mon GitHub</a>
-                        <a href="cv/CV PHUANGKAEO Phichet FR.pdf" download class="btn-primary">Télécharger mon CV</a>
+                            target="_blank" class="btn-dark">Article sur @Medium</a>
+                        <a href="https://github.com/phuangkaeo/house_loan_analysis/blob/main/Lend2-2.ipynb" target="_blank"
+                            class="btn-outline">Consulter mon
+                            GitHub</a>
+                        <a href="cv/Phichet Phuangkaeo.pdf" download class="btn-primary">Télécharger mon CV</a>
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
@@ -51,62 +75,38 @@
                     <div class="hero-image">
                         <img src="img/profile.jpg" alt="PHUANGKAEO Phichet">
                     </div>
-                    <div class="hello-tag">Sawasdee!</div>
-                </div>
-            </div>
-
-            <div class="ticker" aria-hidden="true">
-                <div class="ticker-track">
-                    <div class="ticker-item">Power BI <span class="sep">◆</span></div>
-                    <div class="ticker-item">DAX <span class="sep">◆</span></div>
-                    <div class="ticker-item">SQL Server <span class="sep">◆</span></div>
-                    <div class="ticker-item">SAP BW <span class="sep">◆</span></div>
-                    <div class="ticker-item">Python <span class="sep">◆</span></div>
-                    <div class="ticker-item">Azure Data Factory <span class="sep">◆</span></div>
-                    <div class="ticker-item">Databricks <span class="sep">◆</span></div>
-                    <div class="ticker-item">Talend <span class="sep">◆</span></div>
-                    <!-- duplicate set for seamless loop -->
-                    <div class="ticker-item">Power BI <span class="sep">◆</span></div>
-                    <div class="ticker-item">DAX <span class="sep">◆</span></div>
-                    <div class="ticker-item">SQL Server <span class="sep">◆</span></div>
-                    <div class="ticker-item">SAP BW <span class="sep">◆</span></div>
-                    <div class="ticker-item">Python <span class="sep">◆</span></div>
-                    <div class="ticker-item">Azure Data Factory <span class="sep">◆</span></div>
-                    <div class="ticker-item">Databricks <span class="sep">◆</span></div>
-                    <div class="ticker-item">Talend <span class="sep">◆</span></div>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="skills">
             <div class="section-container">
-                <span class="section-eyebrow hidden">Mes domaines</span>
                 <h2 class="section-title hidden">Compétences</h2>
                 <div class="skills-grid hidden">
                     <div class="skill-card hover-glow">
-                        <h3><span class="dot"></span>Power BI & Reporting</h3>
+                        <h3><span class="dot"></span> Power BI & Reporting</h3>
                         <p>Power BI, Tableau, DAX, Power Query, Semantic Models, Star Schema, KPI Reporting, Dashboard
                             Development.</p>
                     </div>
                     <div class="skill-card hover-glow">
-                        <h3><span class="dot"></span>Data Engineering</h3>
+                        <h3><span class="dot"></span> Data Engineering</h3>
                         <p>SQL Server, BigQuery, SAP BW, SSIS, Talend, Oracle ODI, Azure Data Factory, Databricks.</p>
                     </div>
                     <div class="skill-card hover-glow">
-                        <h3><span class="dot"></span>Gouvernance & Modélisation</h3>
+                        <h3><span class="dot"></span> Gouvernance & Modélisation</h3>
                         <p>Data Warehouse, Data Mart, Data Quality, Data Lineage, RLS (Row-Level Security), Self-Service
                             BI.</p>
                     </div>
                     <div class="skill-card hover-glow">
-                        <h3><span class="dot"></span>Programmation & Automatisation</h3>
+                        <h3><span class="dot"></span> Programmation & Automatisation</h3>
                         <p>SQL, Python, Power Automate, Git.</p>
                     </div>
                     <div class="skill-card hover-glow">
-                        <h3><span class="dot"></span>Langues</h3>
+                        <h3><span class="dot"></span> Langues</h3>
                         <p>Thaï (natif) &middot; Anglais (C1) &middot; Français (B2)</p>
                     </div>
                     <div class="skill-card hover-glow">
-                        <h3><span class="dot"></span>Certifications</h3>
+                        <h3><span class="dot"></span> Certifications</h3>
                         <p>Microsoft Certified: PL-300 &middot; Google Data Analytics</p>
                     </div>
                 </div>
@@ -115,15 +115,17 @@
 
         <section id="experience" class="experience">
             <div class="section-container">
-                <span class="section-eyebrow hidden">Parcours</span>
-                <h2 class="section-title hidden">Expérience</h2>
+                <h2 class="section-title hidden">Expériences Professionnelles</h2>
                 <div class="timeline">
+                    <!-- TGH Group -->
                     <div class="timeline-item hidden">
-                        <div class="timeline-dot primary">01</div>
+                        <div class="timeline-meta">
+                            <span class="date">2026 – Présent</span>
+                            <span class="company">TGH Group</span>
+                        </div>
                         <div class="timeline-content">
+                            <div class="timeline-dot primary"></div>
                             <h3>Consultant BI – Mission Freelance</h3>
-                            <div class="timeline-meta"><span class="company">TGH Group · Secteur Assurance — Lille,
-                                    Hauts-de-France</span></div>
                             <ul>
                                 <li>Analyse des besoins financiers et définition des KPI pour les équipes Finance et
                                     Contrôle de Gestion.</li>
@@ -135,14 +137,16 @@
                                     décision.</li>
                             </ul>
                         </div>
-                        <div class="timeline-meta-right">2026 – Présent</div>
                     </div>
+                    <!-- oXya -->
                     <div class="timeline-item hidden">
-                        <div class="timeline-dot">02</div>
+                        <div class="timeline-meta">
+                            <span class="date">2023 – 2025</span>
+                            <span class="company">oXya (Groupe Hitachi)</span>
+                        </div>
                         <div class="timeline-content">
+                            <div class="timeline-dot"></div>
                             <h3>Data Engineer</h3>
-                            <div class="timeline-meta"><span class="company">oXya (Groupe Hitachi) — Loos,
-                                    Hauts-de-France</span></div>
                             <ul>
                                 <li>Architecture et déploiement d'un Data Warehouse couvrant 12 domaines métiers dans
                                     un environnement SAP ERP.</li>
@@ -152,14 +156,16 @@
                                 <li>Mise en œuvre des standards de Data Quality, documentation et gouvernance BI.</li>
                             </ul>
                         </div>
-                        <div class="timeline-meta-right">2023 – 2025</div>
                     </div>
+                    <!-- Ramsay Santé -->
                     <div class="timeline-item hidden">
-                        <div class="timeline-dot">03</div>
+                        <div class="timeline-meta">
+                            <span class="date">2022</span>
+                            <span class="company">Ramsay Santé</span>
+                        </div>
                         <div class="timeline-content">
+                            <div class="timeline-dot"></div>
                             <h3>Data Analyst</h3>
-                            <div class="timeline-meta"><span class="company">Ramsay Santé — Marcq-en-Barœul,
-                                    Hauts-de-France</span></div>
                             <ul>
                                 <li>Développement de tableaux de bord Power BI pour le suivi de la performance
                                     hospitalière (PMSI, admissions, DMS).</li>
@@ -169,14 +175,16 @@
                                 <li>Formation des utilisateurs métier au Self-Service BI.</li>
                             </ul>
                         </div>
-                        <div class="timeline-meta-right">2022</div>
                     </div>
+                    <!-- Avalant Global -->
                     <div class="timeline-item hidden">
-                        <div class="timeline-dot">04</div>
+                        <div class="timeline-meta">
+                            <span class="date">2021 – 2022</span>
+                            <span class="company">Avalant Global</span>
+                        </div>
                         <div class="timeline-content">
+                            <div class="timeline-dot"></div>
                             <h3>Consultant BI Freelance</h3>
-                            <div class="timeline-meta"><span class="company">Avalant Global — Lille,
-                                    Hauts-de-France (Remote)</span></div>
                             <ul>
                                 <li>Développement de pipelines ETL Oracle ODI et construction de Data Marts pour le
                                     reporting Retail.</li>
@@ -184,46 +192,49 @@
                                 <li>Amélioration de la qualité et de la fiabilité des données.</li>
                             </ul>
                         </div>
-                        <div class="timeline-meta-right">2021 – 2022</div>
                     </div>
+                    <!-- 4Plus Consulting -->
                     <div class="timeline-item hidden">
-                        <div class="timeline-dot">05</div>
+                        <div class="timeline-meta">
+                            <span class="date">2016 – 2020</span>
+                            <span class="company">4Plus Consulting</span>
+                        </div>
                         <div class="timeline-content">
+                            <div class="timeline-dot"></div>
                             <h3>Développeur BI / Développeur SAP Business Objects</h3>
-                            <div class="timeline-meta"><span class="company">4Plus Consulting — Bangkok,
-                                    Thaïlande</span></div>
                             <ul>
                                 <li>Réalisation de projets BI pour des acteurs de la banque, de l'immobilier, de
-                                    l'agroalimentaire et du secteur public (Government Housing Bank, Taokaenoi,
-                                    Singha Estate, Pruksa Real Estate).</li>
+                                    l'agroalimentaire et du secteur public (Government Housing Bank, Taokaenoi, Singha
+                                    Estate, Pruksa Real Estate).</li>
                                 <li>Développement de Data Warehouses avec SAP Data Services.</li>
                                 <li>Modélisation SAP BW (InfoCubes, ODS, MultiProviders).</li>
                                 <li>Développement de rapports SAP Business Objects.</li>
                                 <li>Animation d'ateliers métier et accompagnement des phases UAT/SIT.</li>
                             </ul>
                         </div>
-                        <div class="timeline-meta-right">2016 – 2020</div>
                     </div>
+                    <!-- Siam Piwat -->
                     <div class="timeline-item hidden">
-                        <div class="timeline-dot">06</div>
+                        <div class="timeline-meta">
+                            <span class="date">2016 – 2018</span>
+                            <span class="company">Siam Piwat Retail</span>
+                        </div>
                         <div class="timeline-content">
+                            <div class="timeline-dot"></div>
                             <h3>Formateur BI & Technique</h3>
-                            <div class="timeline-meta"><span class="company">Siam Piwat Retail — Bangkok,
-                                    Thaïlande</span></div>
                             <ul>
                                 <li>Formation des équipes métier à Tableau et SAP Data Services dans un contexte
                                     multi-sites et multi-filiales.</li>
                                 <li>Conception et animation de programmes de formation adaptés aux besoins des
                                     utilisateurs métier et des équipes opérationnelles.</li>
-                                <li>Création de supports pédagogiques standardisés déployés dans plusieurs entités
-                                    du groupe.</li>
+                                <li>Création de supports pédagogiques standardisés déployés dans plusieurs entités du
+                                    groupe.</li>
                                 <li>Administration et maintenance de l'Enterprise Data Warehouse (EDW) en
                                     environnements de développement et de production.</li>
-                                <li>Support aux activités de reporting et d'analyse décisionnelle à travers les
-                                    outils BI du groupe.</li>
+                                <li>Support aux activités de reporting et d'analyse décisionnelle à travers les outils
+                                    BI du groupe.</li>
                             </ul>
                         </div>
-                        <div class="timeline-meta-right">2016 – 2018</div>
                     </div>
                 </div>
             </div>
@@ -231,12 +242,11 @@
 
         <section id="projects" class="projects">
             <div class="section-container">
-                <span class="section-eyebrow hidden">Réalisations</span>
                 <h2 class="section-title hidden">Projets</h2>
                 <div class="projects-grid hidden">
                     <div class="project-card hover-glow">
                         <span class="project-tag">Power BI</span>
-                        <h3>Dashboard PMO</h3>
+                        <h3><span class="dot"></span> Dashboard PMO</h3>
                         <ul>
                             <li>Suivi de 530 tâches Microsoft Planner pour les équipes FMGC/Farinia.</li>
                             <li>Modélisation en étoile avec table de pont pour la gestion des assignations
@@ -248,7 +258,7 @@
                     </div>
                     <div class="project-card hover-glow">
                         <span class="project-tag">Power BI · DAX</span>
-                        <h3>Reporting Financier TGH Group</h3>
+                        <h3><span class="dot"></span> Reporting Financier TGH Group</h3>
                         <ul>
                             <li>Analyse CAPEX/OPEX pour un groupe d'assurance thaïlandais composé de 13 entités
                                 représentant plus de 5 milliards de bahts d'actifs.</li>
@@ -259,7 +269,7 @@
                     </div>
                     <div class="project-card hover-glow">
                         <span class="project-tag">Python · Excel</span>
-                        <h3>ClearMind Life Planner</h3>
+                        <h3><span class="dot"></span> ClearMind Life Planner</h3>
                         <ul>
                             <li>Conception d'un produit Excel de 29 onglets destiné au marché ADHD sur Etsy.</li>
                             <li>Développement de fonctionnalités de gestion des tâches récurrentes, suivi budgétaire,
@@ -269,12 +279,12 @@
                     </div>
                     <div class="project-card hover-glow">
                         <span class="project-tag">Power BI · HTML Content</span>
-                        <h3>Sales Dashboard</h3>
+                        <h3><span class="dot"></span> Sales Dashboard</h3>
                         <ul>
                             <li>Conception d'un tableau de bord commercial dark-theme avec modélisation en étoile
                                 (table Transactions + table de mesures DAX).</li>
                             <li>Développement de 3 mesures DAX clés : Total Sales, Total Cost, Total Profit avec
-                                analyses mensuelles en combo chart.</li>
+                                analyses mensuelles en combo chart (ligne + colonnes groupées).</li>
                             <li>Intégration de 4 visuels HTML Content personnalisés : KPI row, header, progress bar
                                 par pays et classement des Sales Managers.</li>
                             <li>Navigation multi-vues via bookmarks avec analyses par produit, pays et type de
@@ -287,8 +297,7 @@
 
         <section id="education" class="education">
             <div class="section-container">
-                <span class="section-eyebrow hidden">Formation</span>
-                <h2 class="section-title hidden">Diplômes & Certifications</h2>
+                <h2 class="section-title hidden">Formation</h2>
                 <div class="education-grid hidden">
                     <div class="education-card hover-glow">
                         <div class="date-badge">2026 — En cours</div>
@@ -303,36 +312,13 @@
                     <div class="education-card hover-glow">
                         <div class="date-badge">2016</div>
                         <h3>Master of Science in IT Management</h3>
-                        <p>NIDA, Bangkok</p>
+                        <p>National Institute of Development Administration (NIDA), Bangkok</p>
                     </div>
                     <div class="education-card hover-glow certification-card">
-                        <span class="certification-badge">Certifié</span>
+                        <div class="certification-badge">Certifié</div>
                         <div class="cert-provider">Microsoft Certified</div>
-                        <div class="cert-title">PL-300 — Power BI Data Analyst Associate</div>
-                        <div class="cert-title">Google Data Analytics</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="stats">
-            <div class="section-container">
-                <div class="stats-grid">
-                    <div class="stat-cell hidden">
-                        <span class="stat-value">6<span>+</span></span>
-                        <span class="stat-label">ans d'expérience</span>
-                    </div>
-                    <div class="stat-cell hidden">
-                        <span class="stat-value">30<span>+</span></span>
-                        <span class="stat-label">dashboards Power BI</span>
-                    </div>
-                    <div class="stat-cell hidden">
-                        <span class="stat-value">200<span>+</span></span>
-                        <span class="stat-label">utilisateurs servis</span>
-                    </div>
-                    <div class="stat-cell hidden">
-                        <span class="stat-value"><span>-</span>40%</span>
-                        <span class="stat-label">délais de reporting</span>
+                        <h3 class="cert-title">PL-300 — Power BI Data Analyst Associate</h3>
+                        <h3 class="cert-title">Google Data Analytics</h3>
                     </div>
                 </div>
             </div>
@@ -340,51 +326,51 @@
 
         <section id="contact" class="contact">
             <div class="section-container">
-                <span class="section-eyebrow hidden">Disponibilité</span>
-                <h2 class="contact-heading hidden">Travaillons <span class="accent-word">ensemble</span><span
-                        class="arrow">→</span></h2>
-                <form class="contact-form hidden">
-                    <div class="form-row">
-                        <div class="form-field">
-                            <label>Nom<span class="req">*</span></label>
-                            <input type="text" placeholder="Votre nom">
+                <h2 class="contact-title hidden">Travaillons <span>ensemble</span></h2>
+                <p class="contact-desc hidden">
+                    Je suis actuellement à la recherche d'une alternance pour mon MBA2 Finance et Data Performance
+                    (Rythme : 1 semaine école / 3 semaines entreprise).
+                </p>
+
+                <div class="contact-glass-card hidden">
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="icon">📧</div>
+                            <span class="label">Email</span>
+                            <a href="mailto:phichet.phuangkaeo@outlook.com">phichet.phuangkaeo@outlook.com</a>
                         </div>
-                        <div class="form-field">
-                            <label>Email<span class="req">*</span></label>
-                            <input type="email" placeholder="Votre email">
+                        <div class="contact-info">
+                            <div class="icon">📞</div>
+                            <span class="label">Téléphone</span>
+                            <p>+33 7 66 08 95 58</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="icon">📍</div>
+                            <span class="label">Localisation</span>
+                            <p>Lille / Paris</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="icon">💼</div>
+                            <span class="label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/phichet-phuangkaeo-7b1898184/" target="_blank">Phichet
+                                Phuangkaeo</a>
                         </div>
                     </div>
-                    <div class="form-field">
-                        <label>Entreprise</label>
-                        <input type="text" placeholder="Nom de votre entreprise">
+
+                    <div class="contact-links">
+                        <a href="https://medium.com/@phichet.phuangkaeo/its-about-machine-learning-46cc2f6b2dfe"
+                            target="_blank" class="glass-btn">Article sur Medium</a>
+                        <a href="https://github.com/phuangkaeo/house_loan_analysis" target="_blank"
+                            class="glass-btn">GitHub</a>
                     </div>
-                    <div class="form-field">
-                        <label>Votre besoin<span class="req">*</span></label>
-                        <div class="chip-group">
-                            <span class="chip">Alternance BI</span>
-                            <span class="chip">Mission freelance</span>
-                            <span class="chip">Power BI</span>
-                            <span class="chip">Data Engineering</span>
-                            <span class="chip">Autre</span>
-                        </div>
-                    </div>
-                    <div class="contact-footer-row">
-                        <span class="contact-note">Je réponds généralement sous 24h.</span>
-                        <a href="mailto:phichet.phuangkaeo@outlook.com" class="btn-primary">Envoyer</a>
-                    </div>
-                </form>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-            <p>© 2026 Phuangkaeo Phichet</p>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/phichet-phuangkaeo-7b1898184/" target="_blank">LinkedIn</a>
-                <a href="https://phuangkaeo.github.io" target="_blank">GitHub</a>
-                <a href="mailto:phichet.phuangkaeo@outlook.com">Email</a>
-            </div>
+            <p>© 2026 PHUANGKAEO Phichet. Business Intelligence Consultant.</p>
         </div>
     </footer>
 
